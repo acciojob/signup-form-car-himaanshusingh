@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form</title>
+    <link rel="stylsheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- prettier-ignore -->
+    <form action="submit.php" method="post">
+      <fieldset>
+        <legend>Signup Form</legend>
+        <div id="name-div">
+          <label for="name">Name: </label>
+          <input type="text" id="name" required placeholder="Name" />
+        </div>
+        <div id="email-div">
+          <label for="email">Email: </label>
+          <input type="email" id="email" required placeholder="Email" />
+        </div>
+        <div id="gender-div">
+          <label for="gender_m">Male</label>
+          <input type="radio" name="gender" id="gender_m" value="male" required/>
+          <label for="gender_f">Female</label>
+          <input type="radio" name="gender" id="gender_f" value="female" required/>
+        </div>
+        <div id="cars-div">
+          <label for="cars">Car: </label>
+          <select name="car" id="cars" required>
+            <option disabled selected>--Please choose an option--</option>
+            <option value="Mahindra">Mahindra</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Ford">Ford</option>
+          </select>
+        </div>
+        <div id="age-div">
+          <label for="age">Age: </label>
+          <input type="number" id="age" placeholder="Age" required />
+        </div>
+        <div id="dob-div">
+          <label for="dob">DOB: </label>
+          <input type="date" required id="dob" />
+        </div>
+        <div id="phone-number-div">
+          <label for="tel">Phone Number: </label>
+          <input type="tel" id="tel" placeholder="xxx-xxx-xxxx" />
+        </div>
+        <div id="password-div">
+          <label for="password">Password: </label>
+          <input type="password" id="password" required placeholder="Password" />
+        </div>
+        <div id="tos-div">
+          <label for="tos">I agree to the TOS</label>
+          <input type="checkbox" required id="tos" />
+        </div>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+  </body>
 </html>
